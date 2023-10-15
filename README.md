@@ -4,15 +4,16 @@
 
 ![](/screenshots/screenshot.png)
 
+<a name="details"></a>
+## Details ##
+- **Window Manager** • [Hyprland](https://github.com/hyprwm/Hyprland)
+- **Shell** • [Zsh](https://www.zsh.org)
+- **Terminal** • [Alacritty](https://github.com/alacritty/alacritty)
+- **Status Bar** • [Waybar](https://aur.archlinux.org/packages/waybar-hyprland-git)
+- **Launcher** • [Rofi](https://github.com/davatorium/rofi)
+- **File Manager** • [Ranger](https://github.com/ranger/ranger)
+- **Vim Setup** • [NvChad-V2](https://github.com/linuxmobile/nvchad-v2)
 
-## Contents ##
-1. [Details](#details)
-2. [Dependencies](#dependencies)
-3. [Installation](#installation)
-4. [Folder Structure](#folderStructure)
-5. [Application Theming](#appTheming)
-6. [Keybinds](#keybinds)
-7. [Notes](#notes)
 
 <a name="installation"></a>
 ## Installation ##
