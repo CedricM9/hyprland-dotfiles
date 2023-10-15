@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="smb://192.168.0.33/jellyfin/" added="2023-01-04T16:02:04.470757Z" modified="2023-01-04T16:02:04.470769Z" visited="2023-01-04T16:02:04.470763Z">
+    <title>jellyfin on 192.168.0.33</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;org.gnome.Nautilus %u&apos;" modified="2023-01-04T16:02:04.470766Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="smb://192.168.0.33/personal/" added="2023-01-04T16:02:32.023375Z" modified="2023-01-04T16:02:32.023385Z" visited="2023-01-04T16:02:32.023380Z">
+    <title>personal on 192.168.0.33</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;org.gnome.Nautilus %u&apos;" modified="2023-01-04T16:02:32.023383Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="smb://192.168.0.204/jellyfin/" added="2023-01-05T09:19:08.603573Z" modified="2023-10-14T17:29:06.694114Z" visited="2023-10-14T17:29:06.694112Z">
+    <title>jellyfin on 192.168.0.204</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;org.gnome.Nautilus %u&apos;" modified="2023-10-14T17:29:06.694113Z" count="13"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="smb://192.168.0.204/personal/" added="2023-01-05T09:19:23.427388Z" modified="2023-03-18T18:02:56.020858Z" visited="2023-03-18T18:02:56.020857Z">
+    <title>personal on 192.168.0.204</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;org.gnome.Nautilus %u&apos;" modified="2023-03-18T18:02:56.020857Z" count="7"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="smb://192.168.0.204/misc/" added="2023-01-08T12:46:27.857837Z" modified="2023-01-09T13:31:34.427776Z" visited="2023-01-09T13:31:34.427771Z">
+    <title>misc on 192.168.0.204</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;org.gnome.Nautilus %u&apos;" modified="2023-01-09T13:31:34.427774Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>
