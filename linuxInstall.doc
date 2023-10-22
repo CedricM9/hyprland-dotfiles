@@ -1,0 +1,13 @@
+1) Install Windows
+2) Install Manjaro (Minimal)
+    * Root Partition (>30gb)
+    * Swap Partition (8gb)
+    * Boot EFI Partition (600mb)
+        Create Seperate from Windows Partition and Label as boot/efi
+    * Home Partition (Rest)
+3) Install Firefox
+4) Login to Github and Generate Personal Access Token
+5) Clone awesome-install-script
+6) Execute install_1.sh
+7) Close Terminal
+8) Execute install_2.sh
