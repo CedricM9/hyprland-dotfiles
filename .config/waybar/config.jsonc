@@ -6,16 +6,23 @@
     "passtrough": false,
     "gtk-layer-shell": true,
     "height": 0,
-    "modules-left": ["hyprland/workspaces"],
+    "modules-left": [
+        "custom/launcher",
+        "hyprland/workspaces"],
     "modules-center": ["clock", "custom/weather"],
     "modules-right": [
         "tray",
         "custom/updates",
         "network",
+        "idle_inhibitor",
+        "cpu",
         //"custom/language",
         "battery",
         "pulseaudio",
-        "pulseaudio#microphone"
+        //"pulseaudio#microphone",
+        "backlight#icon",
+        "backlight#value",
+        "custom/power"
     ],
 
     "hyprland/window": {
@@ -40,12 +47,28 @@
             "sort-by-number": true
           }
     },
-    // "cpu": {
-    //     "interval": 10,
-    //     "format": " {}%",
-    //     "max-length": 10,
-    //     "on-click": ""
-    // },
+
+    "idle_inhibitor": {
+        "format": "{icon} ",
+        "format-icons":{
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+
+
+
+
+    "cpu": {
+        "interval": 5,
+        "format": "  {usage}% ({load})", // Icon: microchip
+        "states": {
+            "warning": 70,
+            "critical": 90
+        },
+        "on-click": "alacritty -e 'btop'"
+    },
+    
     // "memory": {
     //     "interval": 30,
     //     "format": " {}%",
@@ -53,7 +76,7 @@
     //     "max-length": 10
     // },
     "custom/updates": {
-        "exec": "(paru -Qua) | wc -l",
+        "exec": "checkupdates | wc -l",
         "interval": 7200,
         "format": " {}"
     },
@@ -63,37 +86,36 @@
     //     "format": " {}",
     //     "tooltip": false
     // },
-    "custom/weather" : {
-        "tooltip" : true,
-        "format" : "{}",
-        "restart-interval" : 300,
-        "exec" : "~/.config/waybar/scripts/waybar-wttr.py",
-        "return-type" : "json"
+    "custom/weather": {
+        "exec": "~/.config/waybar/scripts/weather.sh aachen", 
+        "return-type": "json",
+        "interval": 600
     },
+
     "tray": {
         "icon-size": 13,
         "tooltip": false,
         "spacing": 10
     },
+
     "clock": {
         "format": "{: %R   %d/%m}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
 
-"   battery": {
+    "battery": {
         "states": {
-            "good": 95,
+            // "good": 95,
             "warning": 30,
             "critical": 15
         },
-        "format":"{icon}  {capacity}%",
+        "format": "{capacity}% {icon}",
         "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
-        "format-alt": "{icon} {time}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
-	},
+    },
 
     "custom/launcher": {
         "format": "󰈸",
@@ -103,13 +125,22 @@
 //    "on-click-right": "wofi --show run -I -a -n -W 500 -H 376 -s ~/.config/wofi/themes/gruvbox.css"  
   },
 
-    "backlight": {
-        // "device": "acpi_video1",
-	"format": "{icon} {percent}%",
-        "format-icons": ["", "", "", "", "", "", "", "", ""],
-//	"on-scroll-up":,
-//	"on-scroll-down":,
-	},
+    "backlight#icon": {
+        "format": "{icon}",
+        "format-icons": [""],
+        "on-scroll-down": "brightnessctl -c backlight set 5%-",
+        "on-scroll-up": "brightnessctl -c backlight set +5%",
+        "on-click": "brightnessctl -c backlight set 5%-",
+        "on-click-right": "brightnessctl -c backlight set +5%"
+    },
+
+    "backlight#value" :{
+         "format": "{percent}%",
+         "on-scroll-down": "brightnessctl -c backlight set 5%-",
+         "on-scroll-up": "brightnessctl -c backlight set +5%",
+        "on-click": "brightnessctl -c backlight set 5%-",
+        "on-click-right": "brightnessctl -c backlight set +5%"
+    },
 
 
     "network": {
@@ -119,7 +150,7 @@
         	"format-disconnected": "󰤭",
         	"format-alt": " {ifname}: {ipaddr}/{cidr}",
           "tooltip-format": "{essid}",
-          "on-click-right": "nm-connection-editor"
+          "on-click-right": "alacritty -e 'nmtui'"
 	},
 
 
@@ -150,5 +181,18 @@
         "on-scroll-up": "pamixer --default-source -i 5",
         "on-scroll-down": "pamixer --default-source -d 5",
         "scroll-step": 5
+    },
+
+    "custom/launcher": {
+        "format":" ",
+        "on-click": "exec rofi -show drun -theme config",
+        "tooltip": false
+    },
+
+    "custom/power": {
+        "format":"⏻",
+        "on-click": "exec ~/.config/waybar/scripts/power-menu.sh",
+        "tooltip": false
     }
+
 }

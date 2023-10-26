@@ -65,6 +65,9 @@ sudo systemctl enable --now cups.service
 sudo systemctl enable --now cups.socket
 sudo systemctl enable --now cups.path
 
+#Enable SMB
+sudo systemctl enable smb.service nmb.service
+
 # Set Time Zone/Format
 
 # Change Monitor Setup (Must have autorandr installed)
@@ -83,6 +86,7 @@ git config --global user.name "CedricM9"
 # sudo pacman -S virtualbox
 # sudo pacman -S linux[KERNEL]-virtualbox-host-modules
 
+swww img ~/Pictures/Wallpapers/Hyprland.png
 # Xbacklight not Working
 # Ensure there is a Symlink /sys/class/backlight/intel_backlight
 # If there is:

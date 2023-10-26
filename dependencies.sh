@@ -7,7 +7,7 @@ pacman -S glibc git
 
 
 # Install Dependencies for Configuration
-pacman -S --noconfirm feh rofi colord ffmpegthumbnailer gnome-keyring gtk-engine-murrine imagemagick kvantum pamixer playerctl polkit-kde-agent qt5-quickcontrols qt5-quickcontrols2 qt5-wayland qt6-wayland swaybg ttf-font-awesome tumber ttf-jetbrains-mono xdotool cliphist qt5-imageformats qt5ct npm dunst
+pacman -S --noconfirm feh rofi colord ffmpegthumbnailer gnome-keyring gtk-engine-murrine imagemagick kvantum pamixer playerctl polkit-kde-agent qt5-quickcontrols qt5-quickcontrols2 qt5-wayland qt6-wayland ttf-font-awesome tumber ttf-jetbrains-mono xdotool cliphist qt5-imageformats qt5ct npm dunst gvfs-smb swww
 
 # GTK
 pacman -S gtk4
