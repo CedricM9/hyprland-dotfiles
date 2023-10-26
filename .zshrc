@@ -115,7 +115,6 @@ alias mouse='xinput set-prop "MX Master 2S Mouse" 174 0.6 0 0 0 0.6 0 0 0 1'
 alias lofi="mpv --no-video https://www.youtube.com/watch\?v\=5qap5aO4i9A"
 alias minecraftBackup="scp -r root@192.168.1.213:/var/games/minecraft/servers/Blurp2 Downloads"
 alias wiki="nvim -c :VimwikiIndex"
-alias github="echo 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"
 alias youtube-dl="yt-dlp -4 "
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
