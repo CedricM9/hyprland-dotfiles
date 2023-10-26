@@ -78,8 +78,8 @@ sudo systemctl enable smb.service nmb.service
 #autorandr --save mobile
 
 # Setup Git Environment
-git config --global user.email "cedricmaume@gmail.com"
-git config --global user.name "CedricM9"
+git config --global user.email "EMAIL"
+git config --global user.name "USERNAME"
 
 # VirtualBox Installation
 # uname -r
